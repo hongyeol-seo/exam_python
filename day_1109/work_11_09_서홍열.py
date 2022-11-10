@@ -63,3 +63,4 @@ print(f'{a}>{b} or {a} >= {b} : {(a>b) or (a >= b)}')
 
 print(f'not a>b : {not a>b}')
 print(f'not a==b : {not a==b}')
+
