@@ -5,6 +5,8 @@
 # 복소수를 저장하는 complex 타입 그리고 문자형을 저장하는 str 타입과 \n
 # 논리형으로 bool 타입이 있으며, 0 ~ 255 사이의 코드를 저장하는 bytes 자료형이 있습니다. \n
 
+# 데이터를 메모리에 저장하기 위한 데이터의 종류를 말하며, 저장될 수 있는 범위가 다르다.
+
 # 2. 파이썬에서 자료형 종류별 예시 및 타입을 출력하는 코드를 작성하세요.
 
 print(f'int 형 : type(4) = {type(4)}')
@@ -59,5 +61,5 @@ print(f'{a}>{b} or {a} == {b} : {(a>b) or (a == b)}')
 print(f'{a}<{b} or {a} == {b} : {(a<b) or (a == b)}')
 print(f'{a}>{b} or {a} >= {b} : {(a>b) or (a >= b)}')
 
-print(f'{not a>b} : {not a>b}')
-print(f'{not a==b} : {not a==b}')
+print(f'not a>b : {not a>b}')
+print(f'not a==b : {not a==b}')
