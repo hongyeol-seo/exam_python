@@ -44,5 +44,8 @@ print(f'g in {data} : {"g" in data}') #대,소문자를 구별한다.
 print(f'oD in {data} : {"oD" in data}') #아스키 키보드표를 보면, 다르다.
 print(f'oD not in {data} : {"oD" not in data}') #아스키 키보드표를 보면, 다르다.
 
-
-
+# 문자열 처리 함수들 -> 메서드
+# class str, class int 
+# 클래스가 객체가 되어야만 사용할 수 있다.
+# 'happy'.encode 이런 애들도 가능하다
+# (1). 숫자는 그렇게한다.
