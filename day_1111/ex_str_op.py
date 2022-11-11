@@ -33,3 +33,16 @@ print("\t\t\t\t"+"="*25)
 #한 줄로 만들기!
 
 print("="*25 + '\n\tMy Program\n' + "="*25)
+
+# 멤버 연산자 -------------------------------------
+# 요소 in 그룹 : 요소가 그룹에 존재 하면 True
+# 요소 not in 그룹 : 요소가 그룹에 존재하지 않으면 True
+
+data = "Good"
+print(f'G in {data} : {"G" in data}')
+print(f'g in {data} : {"g" in data}') #대,소문자를 구별한다.
+print(f'oD in {data} : {"oD" in data}') #아스키 키보드표를 보면, 다르다.
+print(f'oD not in {data} : {"oD" not in data}') #아스키 키보드표를 보면, 다르다.
+
+
+
