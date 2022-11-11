@@ -14,7 +14,7 @@ msg = "Merri Chrstmas!"
 # print(msg)
 
 # 방법 2번 str타입의 전용 메서드 replace()
-print(msg.replace("r","y")) #첫번째, 두번째 / unexpected EOF while parsing / 이거 속성값도있던데?
+print(msg.replace("r","y")) #첫번째, 두번째 / unexpected EOF while parsing / 이거 속성값도있던데? / 몇 개를 바꿀 수 있는가? default 값으면 -1인데 이건 다 바꾸라는 말
 # replace(바꿀문자열, 새로운문자열)
 
 # 문자열에서 인덱스를 찾아주는 메서드
@@ -31,5 +31,5 @@ print(f'{msg} => C Find : {msg.rfind("r")}') #만약에 문자열의 뒤에서�
 
 #인덱스 메서드로 찾기.
 
-print(f'{msg} => C 인덱스 : {msg.index("r",4)}') #없을때는 오류를 보낸다. 
+print(f'{msg} => C 인덱스 : {msg.index("r",4)}') #없을때는 오류를 보낸다.  #옵션값으로 뒤에 주고 있
 #파인드를 쓸지, 인덱스를 쓸지! 
