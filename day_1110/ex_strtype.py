@@ -64,7 +64,7 @@ print(strNumber[5],strNumber[7],strNumber[9],strNumber[11],strNumber[13])
 print(strNumber[5:14:2]) #끝규칙
 print(strNumber[5::2]) #끝은 생략 그 대신, 2씩 증가
 
-#[실습] ----------------------------------------
+# [실습] ----------------------------------------
 # 본인의 생년월일 계절을 한번에 입력 받아서 년, 월, 일 계절을 네 개의 변수에 저장하기
 
 birthmessage = input("본인의 생년월일과 계절을 입력해주세요 ex) 1992년4월13일warm : ")
@@ -77,4 +77,4 @@ month = birthmessage[5:7]
 day = birthmessage[7:10]
 season = birthmessage[10:]
 
-print(year, month, day, season)
+print("년도 %s" %year)
