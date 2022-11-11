@@ -96,3 +96,13 @@ new_phone = '.'.join(phone2)
 print(f'new phone : {new_phone}')
 new_phone = ' '.join(phone2)
 print(f'new phone : {new_phone}')
+
+# [실습]
+# 하고 싶은 말을 입력받아서, 출력하기
+talk = input("하고 싶은 말 입력 : ")
+print(type(talk)) 
+print(f'talk 길이 : {len(talk)}') #공백제거
+
+talk = talk.strip()
+print(f'talk 길이 : {len(talk)}') #공백제거
+
