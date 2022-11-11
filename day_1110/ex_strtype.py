@@ -54,6 +54,8 @@ print(text[0:5])
 # strNumber 아! 문자열이 있겠구나!
 
 strNumber = "CODE_123456789"
+print(strNumber[5::2]) #끝은 생략 그 대신, 2씩 증가
+
 
 # 13579 만출력
 print(strNumber[5],strNumber[7],strNumber[9],strNumber[11],strNumber[13])
