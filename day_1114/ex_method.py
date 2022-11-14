@@ -16,4 +16,19 @@ print(msg.replace("cc","c"))
 #문자열을 특정 기준으로 문자열 나누기 split()
 print(msg.split())
 
+#재미잇는 str메서드 -------------------------------------
+#첫 번째 문자열 체크 후 결과를 true or false 내놔라
+
+print(msg.startswith("Go"))
+
+#문자열 끝부분을 체크 후 결과 True/False => endswith()
+print(msg.endswith("ck"))
+
+#입력 받은 데이터가 숫자, 문자인지 검사 후 결과 true/false
+
+
+msg = "123213"
+
+print(msg, msg.isnumeric()) #숫자를 입력하는거 가지고
+print(msg, msg.isalpha()) #숫자를 입력하는거 가지고 
 
