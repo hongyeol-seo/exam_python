@@ -74,9 +74,6 @@ print(f'nums : {nums}')
 # List.extend()
 nums.append(11)
 nums.extend('pig') #인서랑 append의 차이점 #대괄호를 해서 넣어야하고
-print(nums) 
+print(nums) #iterable 데이터 타입 str이 각각 index를 가지고 있기 때문에 
 
 #index라는 메서드는 반환값이 에러 메시지를 띄우기 때문에 그 전에 있는지 여부를 파악해야한다.
-
-
-
