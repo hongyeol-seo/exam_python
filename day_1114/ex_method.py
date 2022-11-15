@@ -26,9 +26,8 @@ print(msg.endswith("ck"))
 
 #입력 받은 데이터가 숫자, 문자인지 검사 후 결과 true/false
 
-
 msg = "123213"
+msg2 = "Asdfasdfadf"
 
-print(msg, msg.isnumeric()) #숫자를 입력하는거 가지고
-print(msg, msg.isalpha()) #숫자를 입력하는거 가지고 
-
+print(msg, msg.isnumeric()) #문자열이 숫자로 이루어져있는지, 아닌지
+print(msg, msg2.isalpha()) #문자열이 영어로 이루어져있는지, 아닌지
