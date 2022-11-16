@@ -127,7 +127,7 @@ print(f'리스트 : {list(range(numList[0],numList[1]))}')
 
 # if intX > intY : 
 #     for i in range(intY,intX+1) : 
-#         list.append(i)
+#         list.appen (i)
     
 # else :
 #     for i in range(intX,intY+1) : 
