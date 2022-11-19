@@ -6,18 +6,18 @@
 
 age = 20
 
-
 # 언패킹 (묶어서 따로따로 저장하는 방법, 풀어놓았던 애들은 풀어서)
 name, age = ('마징가',12) #튜플 / 
 print(name, age) 
 
 kor, eng = {98, 99} #묶여있는 애들을 한 곳에만 저장하는 것이 아니라, 풀어서 저장한다.
-# kor, eng = {98, 99, 100,81} #묶여있는 애들을 한 곳에만 저장하는 것이 아니라, 풀어서 저장한다. too many values to unpack (expected 2) 언패킹을 하기에는 변수가 많다.
+# kor, eng = {98, 99, 100,81} #묶여있는 애들을 한 곳에만 저장하는 것이 아니라, 풀어서 저장한다. 
+# too many values to unpack (expected 2) 언패킹을 하기에는 변수가 많다.
 # kor, eng = ([98, 99], [100,81]) 이것도 안딘다.
 
 data1='원더우먼','히어로'
 data2=('원더우먼','히어로') #튜플 타입
-print(data2[0])
+print(data2)
 print(data1, type(data1)) #이것도 튜플!
 
 #변수와 복사
