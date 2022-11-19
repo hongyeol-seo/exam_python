@@ -35,13 +35,8 @@
 # dict = {'a' : '허ㅗㅇ열'}
 # print(dict.keys('a'))
 
-
 # for i in range(len(abcBig)) :
 #     print(abcBig[i],abcBig[i].lower())
-
-
-
-
 
 a = bool('Happy')
 b = bool("")
