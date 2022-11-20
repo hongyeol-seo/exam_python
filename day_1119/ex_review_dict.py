@@ -23,7 +23,6 @@ exDict.update(name='hongyeol') #key가 있으면 value 갱신
 exDict.update(name2='hongyeol') #key가 없다면 value와 함께 생성
 exDict.update({'update':'result'}) #dict자료형으로 할당가능
 
-
 #값출력
 popResult = exDict.pop("hobby",'KeyError 대신 msg') #value값을 반환한다. 없다면 KeyError
 print(f'pop 반환값 => str : {popResult,type(popResult)}')
