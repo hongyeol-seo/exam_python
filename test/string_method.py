@@ -10,13 +10,19 @@ print("APPLE".casefold()) #모든 문자열을 소문자로
 # center()	Returns a centered string
 "apple".center(30,"*") #가운데 정렬
 
-# count()	Returns the number of times a specified value occurs in a string
-"apple".count("p") 
+# count() Returns the number of times a specified value occurs in a string
+"apple".count("p") #요소 개수 파악
 
 # encode()	Returns an encoded version of the string
+"가".encode(encoding='UTF-8') #인코드로 변환
 
 # endswith()	Returns true if the string ends with the specified value
+"apple".endswith("a") #끝자리가 endswith의 요소값인지 아닌지
+
 # expandtabs()	Sets the tab size of the string
+"a\tpple".expandtabs(10) #tab사거리
+
+
 # find()	Searches the string for a specified value and returns the position of where it was found
 # format()	Formats specified values in a string
 # format_map()	Formats specified values in a string
