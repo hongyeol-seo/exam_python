@@ -1,28 +1,29 @@
-seven = list(range(0,101,7))
-# 첫번째 버전
-# for num in seven :
-#     if num % 35 : #35의 배수 #5개씩 나오는거  #규칙을 찾아야한다.
-#         print(num, end=" ")
 
-#     else:
-#          print(num, end="\n")
 
-#seven의 인덱스를 하려고한다면
+# # dan = input("단을 입력해주세요 : ").strip()
+# # if len(dan)>0:
+# #     dan=int(dan)
+# #     for n in range(1,10):
+# #         print(f'{dan} * {n} ={dan*n}',end="\t")
 
-#두 번째 버전
-for idx in range(len(seven)) :
-    if idx % 5 ==4:
-        print(seven[idx], end="\n")
+# # #
+ 
+# # for i in range(2,10) :
+    
+# #     print(f'{i} 단')
+# #     for j in range(1,10) :
+# #         print(f'{i} * {j} = {i*j:2}',end="\t")
+    
+# #     print("")
+# # #
+# i = 0
+# while i < 10:
+#     i += 1
+#     if i % 2 ==0:
+#         continue
+#     print(i)
 
-    else :
-        print(seven[idx], end="\t")
+number = [1,2,3,4,5]
 
-# 적어서보자!
-# 0 1 2 3 4 
-# 5 6 7 8 9 5라는게 관계가 있을때 5로 나누었을때 나머지가 4인애들
-# 반복을 쓸 때는 유사하거나, 반복적인 것을 할 때 찾아낸다.
-# 값으로 할 수도 있고, 정답을 알 수 있다.
-
-#최대값 최소값
-
-#4나 9로 나누었을때 0이면 되나요?
+result = [i*2 for i in number if not i%2]
+print(result)
