@@ -152,3 +152,5 @@ for i in range(8):
     print("{:^15}".format("*"*(2*i+1)))
 for i in range(7):
     print("{:^15}".format("*"*(13-2*i)))
+
+
