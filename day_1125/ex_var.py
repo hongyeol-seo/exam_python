@@ -24,7 +24,8 @@ def addYear(month):
     global year
     year = year+1 #local variable 'year' referenced before assignment 
     #값을 바꿀려고하는데, 공용화장실바꾸려고한다면, 알려줘야한다. 내가 global year를 사용할께
-    print(year+10, month)
+    msg = 'Happy'
+    print(year+10, month,msg)
     #함수의 변수는 할일 다 하고 나면 사라진다.
 
 for _ in range(0):
