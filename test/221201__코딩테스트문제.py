@@ -191,31 +191,30 @@ while check :
 
 #시작 구구단 종료구구단
 
-check = True
-strNum =2 
-endNum = 4
-endNum2 = endNum + 1 
-dan = 1 
 
-while check :
-    if check or strNum < endNum2:            
-        if check and dan <= 10 :
-            print(f'{strNum} * {dan} = {strNum * dan}')
-            dan +=1
-        
-        elif check and dan == 10:
-            print("a")
-            dan = 1
-            strNum +=1
-        
-        if strNum >= endNum2:
-            print("b")
+def gugudan(s,e):
+
+    check = True
+    strartNum = s
+    newStr = strartNum
+    endNum = e
+    num = 1
+
+    while check:
+        if newStr <= endNum and num < 10: 
+            print(f"{newStr} * {num} = {newStr*num}", end="\t")
+            newStr +=1 
+            continue
+
+        elif newStr > endNum and num < 10:
+            print("")
+            newStr = strartNum
+            num += 1
+            continue
+
+        else :
             check = False
-            break
+            #break
 
-    else :
-        print("c")
-        check = False
-        break
-
+gugudan(2,6)
     
