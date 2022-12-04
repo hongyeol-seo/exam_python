@@ -343,14 +343,40 @@ print(data.swapcase())
 
 #18. 6가지 연산 결과를 한꺼번에 반환하는 함수를 생성 후 호출하여 결과를 아래와 같이출력해 주세요.
 
+def fourCalc(num1, num2):
+    addValue=num1+num2
+    subValue=num1-num2
+    mulValue=num1*num2
+    divValue=num1/num2 if num2>0 else 0
+    remain = num1%num2
+    remain2 = num1//num2
+
+    return addValue, subValue, mulValue, divValue,remain,remain2
+
+
+print('덧셈 값 : {}, \n뺄셈 값 : {}, \n곱셉 값 : {},\n나눗셈 값 {}, \n나머지 값 : {}, \n몫 : {}'.format(fourCalc(4,3)[0],fourCalc(4,3)[1],fourCalc(4,3)[2],fourCalc(4,3)[3],fourCalc(4,3)[4],fourCalc(4,3)[5]))
+
 
 #19. 다양한 사람들로부터 개인정보를 입력받는 함수를 구현하세요.
 
 def saveInfo(**datas):
     for key in datas.keys():
-        print(f"{key} => {datas.get(key)}")
+        if datas.get(key) != "":
+            print(f"{key} => {datas.get(key)}")
 
-saveInfo(age=12, phone='010-2222-1111',job='학생', loc='대구')
+id = input("아이디를 입력하세요 : ").strip()
+name1 = input("이름을 입력하세요 : ").strip()
+age = input("나이를 입력하세요 : ").strip()
+phone = input("번호를 입력하세요 : ").strip()
+job= input("직업을 입력하세요.").strip()
+loc= input("지역을 입력하세요 : ").strip()
+
+# phone = '010-2222-1111'
+# job='학생'
+# loc='대구'
+
+saveInfo(id2=id,name2=name1,age2=age,phone2=phone,job2=job,loc2=loc)
+
 
 
 
@@ -422,3 +448,36 @@ while True :
 
     else:
         print("메뉴 선택값이 없습니다.")
+
+
+# 15. 정수, 실수, 논리, 문자열 등 데이터 입력 시 모두 덧셈한 결과 출력하는 함수를 생성하세요.
+
+def addData(*datas):
+    if len(datas)>0:  
+        if isinstance(datas[0], str): 
+            if datas[0].isdecimal():
+                total= 0
+            else :
+                total= ''    
+        else:
+            total= 0
+
+        for data in datas:
+            # print(type(data))
+            if type(data) == str and data.isdecimal():
+                total += int(data)
+            else :
+                total +=data
+
+        return total
+
+print(addData("2", "9", "3"))
+print(addData(1,3,5))
+# print(addData(1,'a',5))
+print(addData(True, True, False, False, True))
+print(addData('A'))
+print(addData('A','BC','Good'))
+
+
+
+
