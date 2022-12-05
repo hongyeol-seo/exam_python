@@ -1,46 +1,48 @@
 # 1. 문자열 리스트를 입력 받아서 내림차순 결과 가장 낮은 문자열과 가장 높은 문자열을 출력하는 함수를 구현하세요.
 
 def sortArr(arr):
-    arr.sort(reverse=True)
+    # arr.sort(reverse=True)
+    arr = sorted(arr,reverse=True) #default 오름차순, reverse=True 내림차순
+    print(arr)
     print('가장 높은 문자열 : {}, 가장 낮은 문자열 : {}'.format(arr[0],arr[-1]))
 
 msg=['Good', 'child', 'Zoo', 'apple', 'Flower', 'zero']
 
 sortArr(msg)
 
-# msg.sort(reverse=True)
-# print('가장 높은 문자열 : {}, 가장 낮은 문자열 : {}'.format(msg[0],msg[-1]))
-
 # 2. 문자열을 입력하면 UTF-8로 인코딩된 값을 아래와 같이 출력된 함수를 구현해 주세요.
 
-def printStr(n):
+#hex 16진수 0x
+#oct 8진수 0o
+#bin 2진수 0b
+
+def printData(n):
+    """진수변환함수"""
+    print("{:=^10}".format("16진수"))
     for i in n:
         print(hex(ord(i)),end="")
 
-    print("")
+    print("{:=^10}".format("8진수"))
+    for j in n:
+        print(oct(ord(j)),end="")
 
+    print("{:=^10}".format("2진수"))
     for j in n:
         print(bin(ord(j)),end="")
-
-printStr("가나다")
-
+    
 data = "가나다"
-
-print(hex(ord("가"))+hex(ord("나"))+hex(ord("다")))
-print(bin(ord("가"))+bin(ord("나"))+bin(ord("다")))
+printData(data)
 
 #3. 숫자와 콤마로만 이루어진 문자열 data가 주어진다. 이때, data에 포함되어있는 자연수의 합과 가장 작은 수, 가장 큰 수를 출력하는 함수를 구현하세요.
-# 함수를 구현하세요!
 
 def printData(m):
-    im = list(m.replace(",",""))
-    for i in range(len(im)):
-        im[i] = int(im[i])
+    data = list(m.replace(",",""))
+    for i in range(len(data)):
+        data[i] = int(data[i])
 
-    print('{}의 합 : {}, 가장 큰 수 {}, 가장 작은 수 {}'.format(m, sum(im),max(im),min(im)))
+    print('{}의 합 : {}, 가장 큰 수 {}, 가장 작은 수 {}'.format(m, sum(data),max(data),min(data)))
 
 printData('123,42,98,18')
-
 
 data='123,42,98,18'
 data = list(data.replace(",",""))
@@ -59,7 +61,7 @@ print('1,234의 합 : {}, 가장 큰 수 {}, 가장 작은 수 {}'.format(sum(da
 
 # 4. 2, 4, 8 게임은 숫자의 끝 자리가 2, 4, 8로 끝나는 숫자의 경우 다른 문자로 출력하는 게임으로 아래 조건을 만족하도록 구현하자.
 
-n = 100
+n = int(input("숫자를 입력하세요 : ").strip())
 
 for i in range(1,n+1):
 
@@ -113,8 +115,11 @@ print(data)
 data = data.replace(" ","")
 data = data.replace(",","")
 won = data[-1]
-print(format(int(data[:-1]),","),end="")
-print(won)
+# print(format(int(data[:-1]),",d"),end="") #
+print("{:,}{}".format(int(data[:-1]),won))
+#format(int(data[:-1]),",d"),end="") #
+# print(won)
+print(format(12345678910, ',d'))
 
 # 7. 입력받은 정수에 대한 약수를 출력하는 함수를 만들어 주세요.
 
@@ -122,16 +127,15 @@ def measure(n):
     arr = []
     for i in range(1,n+1):
         if n%i == 0 :
-            arr.append(i)
-    print(f'{n}의 약수 : {arr}')
+            arr.append(str(i))
+            data = "".join(arr)
+    print(f'{n}의 약수 :{data}')
 
 measure(int(input("구하고 싶은 수 : ")))
 
 
 # 8. 입력 받은 메시지 중에서 중복 없이 숫자만 출력하는 함수를 만들어 주세요.
-
 msg = ""
-
 msg = "Happy New Year 2023!"
 arr = set()
 for i in msg:
@@ -144,7 +148,7 @@ for j in arr:
 
 # while msg != "X" or msg != "x":
 
-# 9. 생일을 입력 받은 후 한국 나이, 외국 나이를 알려주는 함수를 생성해 주세요.
+# 9. 생일을 입력 받은 후 한국 나이, 외국 나이를 알려주는 함수를 생성해 주세요. #풀어보자! 오늘 함수!
     data = "2000.07.01."
     data = "2000.12.29."
 
@@ -161,6 +165,33 @@ print(dt_now)
 print(type(dt_now.year))
 print(dt_now.month)
 print(dt_now.day)
+
+birth = '2000-12-29'
+today = '2022-12-08'
+
+mYear, mMonth, mDay = birth.split("-")
+nYear, nMonth, nDay = today.split("-")
+
+mYear = int(mYear)
+mMonth = int(mMonth)
+mDay = int(mDay)
+nYear = int(nYear)
+nMonth = int(nMonth)
+nDay = int(nDay)
+
+year = nYear - mYear
+koreaAge = year+1
+
+if mMonth > nMonth :
+    year -= 1
+
+elif mMonth == nMonth and mDay > nDay :
+    year -= 1
+
+print(f"한국나이는 {koreaAge}살입니다.")
+print(f"외국나이는 {year}살입니다.")
+
+
 # https://somjang.tistory.com/entry/BaekJoon-16199%EB%B2%88-%EB%82%98%EC%9D%B4-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-Python
 
 # 팩토리얼(Factorial)을 while반복문으로 구현해 주세요. 팩토리얼 수를 입력 받아서 팩토리얼 결과를 아래와 같이 출력하세요.
@@ -192,7 +223,6 @@ while check :
 
 #시작 구구단 종료구구단
 
-
 def gugudan(s,e):
 
     check = True
@@ -219,8 +249,6 @@ def gugudan(s,e):
 
 gugudan(2,6)
     
-
-
 
 check = True 
 incheck = True #출력체크여부
@@ -304,10 +332,6 @@ num = num % 100;
 n = 12345
 print("만의자리 : {}".format(int(n/10000))) if n/10000 > 1 else True
 print("천의자리 : {}".format(int(n/1000)/10)) if (n%10000)/1000 > 1 else True
-
-
-
-
 
 print("백의자리 : {}".format(int(n/100))) if n/100 > 1 else print("패스")
 
