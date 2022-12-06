@@ -149,22 +149,6 @@ for j in arr:
 # while msg != "X" or msg != "x":
 
 # 9. 생일을 입력 받은 후 한국 나이, 외국 나이를 알려주는 함수를 생성해 주세요. #풀어보자! 오늘 함수!
-    data = "2000.07.01."
-    data = "2000.12.29."
-
-    data = data.replace(".","")
-    year = data[:4]
-    month = int(data[4:6])
-    day = int(data[7:])
-    print(year, month, day)
-
-import datetime
-dt_now = datetime.datetime.now()
-
-print(dt_now)
-print(type(dt_now.year))
-print(dt_now.month)
-print(dt_now.day)
 
 birth = '2000-12-29'
 today = '2022-12-08'
@@ -219,36 +203,6 @@ while check :
         
     print("=",num)
 
-# 13. 구구단 n단부터 m단까지를 반복문 1개로 구현하는 함수를 생성하세요.
-
-#시작 구구단 종료구구단
-
-def gugudan(s,e):
-
-    check = True
-    strartNum = s
-    newStr = strartNum
-    endNum = e
-    num = 1
-
-    while check:
-        if newStr <= endNum and num < 10: 
-            print(f"{newStr} * {num} = {newStr*num}", end="\t")
-            newStr +=1 
-            continue
-
-        elif newStr > endNum and num < 10:
-            print("")
-            newStr = strartNum
-            num += 1
-            continue
-
-        else :
-            check = False
-            #break
-
-gugudan(2,6)
-    
 
 check = True 
 incheck = True #출력체크여부
@@ -281,9 +235,38 @@ while check :
     else :
         print(f"= {sum}")
         break
-        
-# 11. 입력받은 숫자 범위 안에서 소수(Prime Number)를 찾아서 반환하는 함수를 생성하세요.
 
+# 13. 구구단 n단부터 m단까지를 반복문 1개로 구현하는 함수를 생성하세요.
+
+#시작 구구단 종료구구단
+
+def gugudan(s,e):
+
+    check = True
+    strartNum = s
+    newStr = strartNum
+    endNum = e
+    num = 1
+
+    while check:
+        if newStr <= endNum and num < 10: 
+            print(f"{newStr} * {num} = {newStr*num}", end="\t")
+            newStr +=1 
+            continue
+
+        elif newStr > endNum and num < 10:
+            print("")
+            newStr = strartNum
+            num += 1
+            continue
+
+        else :
+            check = False
+            #break
+
+gugudan(2,6)
+    
+# 11. 입력받은 숫자 범위 안에서 소수(Prime Number)를 찾아서 반환하는 함수를 생성하세요.
 # 입력은 함수에 포함하지 않음
 # - 소수(Prime Number)란? 1보다 큰 수 중 1과 자기 자신만을 약수로 가지는 수
 
@@ -300,13 +283,11 @@ def isPrime(a):
 
 for i in range(n+1):
   if(isPrime(i)):
-    print(i)
+    print(i,end=" ")
 
 
 #12. 아래 데이터를 저장합니다. 그리고 과목별 최고점수, 최저점수 출력하세요.
-
 data = {"국어":[90,82,77,94,78],"수학":[89,71,100,82,99],"윤리":[98,80,92,93,91],"국사":[99,91,90,71,83]}
-
 arr= list(data.keys())
 
 print(f'[{arr[0]}] 최고점수 : {max(data[arr[0]])}, 최저점수`{min(data[arr[0]])}')
@@ -317,38 +298,24 @@ print(f'[{arr[3]}] 최고점수 : {max(data[arr[3]])}, 최저점수`{min(data[ar
 
 # 14. 입력받은 숫자에서 천자리, 백자리, 십자리, 일자리를 출력하세요.
 
-n = 12345
+a = 12345
 
-num = len(str(n))
+a % 1000
 
-if num == 5:
-
-printf(" 천의 자리 : %d \n" , num/1000);
-num = num % 1000;
-printf(" 백의 자리 : %d \n" , num / 100);
-num = num % 100;
-
-
-n = 12345
-print("만의자리 : {}".format(int(n/10000))) if n/10000 > 1 else True
-print("천의자리 : {}".format(int(n/1000)/10)) if (n%10000)/1000 > 1 else True
-
-print("백의자리 : {}".format(int(n/100))) if n/100 > 1 else print("패스")
-
-a = 123
-print("백의자리 : %d\n"%(a/100))
-print("십의자리 : %d\n"%((a%100)/10))
-print("일의자리 : %d\n"%(a%10))
-
-
+# print("백의자리 : %d\n"%(a/1000) if (a/1000) > 0 else False)
+print("만의자리 {}:".format((a//10000) if (a//10000) >= 0 else ""))
+print("천의자리 {}:".format(((a%10000)//1000) if ((a%10000)//1000) > 0 else ""))
+print("백의자리 {}:".format(((a%1000)//100) if (a%1000//100) > 0 else ""))
+print("십의자리 {}:".format(((a%100)//10) if (a%100//10) > 0 else ""))
+print("일의자리 {}:".format(((a%10)) if (a%10) > 0 else ""))
 
 # 11. 아래 그림처럼 나오도록 코드 작성하세요. 가장 긴 라인의 별의 수는 15개,
 #  전체 라인수도 15라인 입니다.
 
-for i in range(8):
-    print("{:^15}".format("*"*(2*i+1)))
-for i in range(7):
-    print("{:^15}".format("*"*(13-2*i)))
+# for i in range(8):
+#     print("{:^15}".format("*"*(2*i+1)))
+# for i in range(7):
+#     print("{:^15}".format("*"*(13-2*i)))
 
 for i in range(1,17,2) :
     print("{0:^15}".format("*" * i))
@@ -401,10 +368,6 @@ loc= input("지역을 입력하세요 : ").strip()
 
 saveInfo(id2=id,name2=name1,age2=age,phone2=phone,job2=job,loc2=loc)
 
-
-
-
-
 # def saveInfo(**infos):
 #     print(type(infos), len(infos), infos)
 #     for k,v in infos.items():
@@ -412,9 +375,6 @@ saveInfo(id2=id,name2=name1,age2=age,phone2=phone,job2=job,loc2=loc)
 
 #     for key in infos.keys():
 #         print(f'{key} => {infos.get(key)}')
-
-
-
 
 #20 [나의 계산기] 프로그램을 구현하세요.
 
