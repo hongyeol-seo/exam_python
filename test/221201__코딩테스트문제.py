@@ -252,13 +252,13 @@ def gugudan(s,e):
         if newStr <= endNum and num < 10: 
             print(f"{newStr} * {num} = {newStr*num}", end="\t")
             newStr +=1 
-            continue
+            # continue
 
         elif newStr > endNum and num < 10:
             print("")
             newStr = strartNum
             num += 1
-            continue
+            # continue
 
         else :
             check = False
@@ -270,7 +270,7 @@ gugudan(2,6)
 # 입력은 함수에 포함하지 않음
 # - 소수(Prime Number)란? 1보다 큰 수 중 1과 자기 자신만을 약수로 가지는 수
 
-n=10
+n=50
 
 def isPrime(a):
   if(a<2):
@@ -295,8 +295,8 @@ print(f'[{arr[1]}] 최고점수 : {max(data[arr[1]])}, 최저점수`{min(data[ar
 print(f'[{arr[2]}] 최고점수 : {max(data[arr[2]])}, 최저점수`{min(data[arr[2]])}')
 print(f'[{arr[3]}] 최고점수 : {max(data[arr[3]])}, 최저점수`{min(data[arr[3]])}')
 
-
 # 14. 입력받은 숫자에서 천자리, 백자리, 십자리, 일자리를 출력하세요.
+
 
 a = 12345
 
