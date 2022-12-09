@@ -262,8 +262,6 @@ def gugudan(n, m):
             # break
 
 # data = input("시작구구단, 종료구구단 : ")
-
-
 gugudan(3, 7)
 
 # 14
