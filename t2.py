@@ -22,13 +22,13 @@ print(f"{arrKeys[3]} 최고점수 {max(datas[arrKeys[3]])},{sub[PHight]}, 최저
 
 #1 
 
-i = 5
-result = [{i} * {j} = {i*j} for j in range(1,10) for i in range(2,10)]
+# i = 5
+# result = [{i} * {j} = {i*j} for j in range(1,10) for i in range(2,10)]
 
-print(result)
+# print(result)
 
-gugudan = [({x} + (y),(x*y)) for x in range(8) for y in range(9)]
-print(gugudan)
+# gugudan = [({x} + (y),(x*y)) for x in range(8) for y in range(9)]
+# print(gugudan)
 
 
 
