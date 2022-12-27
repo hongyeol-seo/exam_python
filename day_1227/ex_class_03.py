@@ -40,7 +40,6 @@ class Point:
         #인스턴스 변수 생성 및 초기화
         self.x = x
         self.y = y
-        pass
 
     #메서드
     def printPoint(self):
