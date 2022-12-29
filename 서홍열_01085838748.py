@@ -12,6 +12,8 @@ for j in range(1,10):
     else :
         print(f"{n} * {j} = {result[j-1]}",end="  ")
 
+
+
 #2
 
 def addData(*datas):
