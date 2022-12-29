@@ -261,6 +261,10 @@ def gugudan(n, m):
             check = False
             # break
 
+
+
+
+
 # data = input("시작구구단, 종료구구단 : ")
 stn = int(input("시작 단 입력 : ").strip())
 endn = int(input("끝 단 입력 : ").strip())

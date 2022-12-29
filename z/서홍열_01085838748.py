@@ -13,7 +13,6 @@ for j in range(1,10):
         print(f"{n} * {j} = {result[j-1]}",end="  ")
 
 #2
-
 def addData(*datas):
     if len(datas) > 0:
         # print(datas, type(datas))
@@ -39,9 +38,7 @@ addData(1, 3, 5)
 addData(True, True, False, False, True)
 addData(0.9, 12.4, 4.1)
 
-
 #3 
-
 datas = {"과목" : {"국어","수학","윤리","국사"},"베트맨":[90,89,98,99],"마징가":[82,73,71,91],"피오나":[78,99,91,83]}
 
 name = list(datas.keys())
