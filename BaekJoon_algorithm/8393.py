@@ -4,3 +4,5 @@ for i in range(1,t+1):
     sum += i
 
 print(sum)
+
+# print(sum(range(1, int(input())+1)))
