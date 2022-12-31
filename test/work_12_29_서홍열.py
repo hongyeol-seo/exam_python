@@ -1,11 +1,14 @@
 class saveDate:
 
-    def __init__(self):
+    FILE_NAME = "history.txt"
+    
+    def __init__(self,file_name="history.txt"):
+        self.FILE_NAME = file_name
+
         pass
 
-    def add(x, y):
-        FILE_NAME = "history.txt"
-        fp = open(FILE_NAME, mode='a', encoding='utf-8')
+    def add(x, y): #self로 주기
+        fp = open(saveDate.FILE_NAME, mode='a', encoding='utf-8')
         fp.write(str(x))
         fp.write("+")
         fp.write(str(y))
@@ -90,4 +93,5 @@ class saveDate:
     fp.write(str(num[0]))
     fp.write("\n")
     fp.close()
+
 

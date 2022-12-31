@@ -1,7 +1,8 @@
 # 파일 읽기 살펴보기
 # ----------------------------------------
 
-FILE_NAME = "mydata.txt"
+# FILE_NAME = "mydata.txt"
+FILE_NAME = "new_year.txt"
 
 fp = open(FILE_NAME, mode='r',encoding='utf-8')
 allDate = fp.read()
