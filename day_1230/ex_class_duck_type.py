@@ -18,7 +18,6 @@ class A :
         print(f'{item} 하며 놀고 있다.')
 
     
-
 class B :
     # 클래스 속성
     LOC = "부산"
@@ -59,7 +58,7 @@ cc = C(2025)
 
 #다른 타입의 인스턴스 즉 객체지만, 동일한 속성이 존재하는 경우 
 #동일한 함수 사용가능
-# printMsg(aa)
+printMsg(aa)
 # printMsg(bb)
 # printMsg(cc) #없으니까 오류 발생
 

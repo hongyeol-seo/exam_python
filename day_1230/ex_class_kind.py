@@ -21,9 +21,16 @@ class student:
         self.name = name
         self.grade = grande
         self.school = school
+
         
-    def study(suject) :
-        print(f"{student.name}는{suject} 공부한다.")
+    # def study(suject) :
+    #     print(f"{student.name}는{suject} 공부한다.")
+
+    def study(self,suject) :
+        print(f"{student.name}는{suject} 공부한다-2.")
+    
+    def add_instance_method(self, a,b):
+        print(a+b)
 
     # FILE_NAME = "history.txt"
     
@@ -31,15 +38,15 @@ class student:
     #     self.FILE_NAME = file_name
 
     #     pass
-
     # 컴퓨터야 ! 클래스 안에 있는 변수의 이름을 찾아줘라!
     # self로 만들어서 사용하는 애들이 아니라, 클래스 변수라고 하는 애들은 클래스이름.속성
     # self가 있는 것들은 새로운 공간이 만들어진다. <=> 클래스 변수 . 모든 인스턴스가 공유한다.
 
-
+# student.study("과학")
 s1 = student("길동","1학년","경북대")
-s1.study()
-student("단무지","2학년","대구대").study()
+s1.study("과학")
+student("단무지","2학년","대구대").study("수학")
+
 
 
 # 인스턴스 객체 생성 및  초기화

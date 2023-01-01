@@ -1,3 +1,5 @@
+import shutil
+
 FILE_NAME = "testfile.txt"
 NULL_FILE_NAME = "null_file.txt"
 
@@ -48,12 +50,30 @@ _filename = FILE_NAME.replace(".txt", "_1.txt")
 #             p.write(f'복사 줄 : {i}')
 
 # 방법3
-with open(FILE_NAME, mode="r", encoding="UTF-8") as f:
-    with open(_filename, mode="w", encoding="UTF-8") as p:
+# 복사본에는 줄 번호를 달아주세요.
 
-        while True:
-            data = f.readline()
-            if not data:
-                break
-            print(data)
-            p.write(f'readline을 활용한 {data}')
+def copyfile(filename) :
+    count = 1
+
+    with open(filename, mode="r", encoding="UTF-8") as f:
+        with open(_filename, mode="w", encoding="UTF-8") as p:
+
+            while True:
+                data = f.readline()
+                if not data:
+                    break
+                print(data)
+                p.write(f'readline을 활용한 {count}번째 {data}')
+                count += 1 
+
+copyfile(FILE_NAME)
+
+#방법4
+shutil.copyfile(FILE_NAME,"new_file.txt")
+shutil.copy(FILE_NAME,"new_file.txt")
+shutil.copy2(FILE_NAME,"new_file.txt")
+
+# copyfile과 copy는 메타정보는 복사되지 않습니다.
+# copy2는 메타정보도 복사합니다.
+# 즉, copy2를 사용하면 파일을 작성한 날짜도 복사되지만 
+# copyfile과 copy는 파일을 작성한 날짜가 복사한 날짜로 변경됩니다.
