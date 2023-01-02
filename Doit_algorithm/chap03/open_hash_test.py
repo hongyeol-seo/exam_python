@@ -17,7 +17,7 @@ def select_menu() -> Menu:
 hash = OpenHash(13)  # 크기가 13인 해시 테이블 생성
 
 while True:
-    menu = select_menu()  # 메뉴 선택
+    menu = seect_menu.()  # 메뉴 선택
 
     if menu == Menu.추가:  # 추가
         key = int(input('추가할 키를 입력하세요.: '))

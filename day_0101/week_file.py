@@ -68,10 +68,23 @@ def copyfile(filename) :
 
 copyfile(FILE_NAME)
 
+
+
+fp = open(FILE_NAME, mode="r", encoding="UTF-8")
+if fp :
+    print("존재")
+    print(type(fp))
+else :
+    print("비존재")
+
+print(fp)
+fp.close()
+print("종료")
+
 #방법4
-shutil.copyfile(FILE_NAME,"new_file.txt")
-shutil.copy(FILE_NAME,"new_file.txt")
-shutil.copy2(FILE_NAME,"new_file.txt")
+# shutil.copyfile(FILE_NAME,"new_file.txt")
+# shutil.copy(FILE_NAME,"new_file.txt")
+# shutil.copy2(FILE_NAME,"new_file.txt")
 
 # copyfile과 copy는 메타정보는 복사되지 않습니다.
 # copy2는 메타정보도 복사합니다.

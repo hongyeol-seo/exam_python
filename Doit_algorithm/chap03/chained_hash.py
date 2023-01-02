@@ -82,3 +82,6 @@ class ChainedHash:
                 print(f'  → {p.key} ({p.value})', end='')  # 해시 테이블에 있는 키와 값을 출력
                 p = p.next
             print()
+
+
+
