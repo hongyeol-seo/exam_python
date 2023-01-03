@@ -40,5 +40,5 @@ print(f'df2.ndim =>\n{df2.ndim}') #차원
 print(f'df2.dtype =>\n{df2.dtypes}') #열마다 타입을 알 수 있다.
 print(f'df2.values =>\n {df2.values}\n {type(df2.values)}') #<class 'numpy.ndarray'>
 
-#Q. 튜터에서 애플 넣었을때, 값이 숫자로 변경되어서 들어가는 것인가? int
+#Q. 튜터에서 애플 넣었을때, 값이 숫자로 변경되어서 들어가는 것인가? int Yes
 #Q  리스트로 만들때는 값들이 행으로 들어가는데, 딕셔너리로 만들면 값이 열방향으로 들어가나요?
