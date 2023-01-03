@@ -44,7 +44,8 @@ print(f'sr1 + sr3 :=>\n{sr4},end=\n\n')
 sr4 = sr1.add(sr3,fill_value=0)
 print(f'sr1 + sr3 :=>\n{sr4},end=\n\n')
 
-
 # 결측치와 비교불가
 # sr4 = sr1 >= sr3
 # print(f'sr1 + sr3 :=>\n{sr4},end=\n\n')
+sr4 = sr1.div(sr3,fill_value=0) #?
+print(f'sr1.dimod(sr3) :=>\n{sr4},end=\n\n')
