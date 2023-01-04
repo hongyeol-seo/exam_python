@@ -42,7 +42,6 @@ copyDF = nameDF2.rename(index={'베트맨':'홍길동'})
 print("****************************************")
 print(copyDF, end="\n\n")
 print("****************************************")
-##?? 안되는데...?
 
 
 df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6]})
@@ -69,6 +68,7 @@ df.rename(index=str,inplace=True)
 #[3] 새로운 인덱스 지정 설정 =============================
 #DataFrame.reindex([새로운 인덱스])
 # => 기존 인덱스가 아닌 인덱스의 값은 존재 하지 않는다 => NaN not a Number
+newdf = df.reindex(['10','15','20','25'])
 newdf = df.reindex(['10','15','20','25'],method='bfill')
 #nan => 결측치, 
 

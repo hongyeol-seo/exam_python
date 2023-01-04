@@ -20,6 +20,8 @@ print(f'df1.colums => {df1.columns}')
 #복사본에다가 삭제를 먼저한다. inplace 변수를 true로 준다.
 #'베트맨이 있는 가로 라인 삭제
 reTDF = df1.drop(1)
+df1.drop(1,inplace=True) #인플레이스를 하면 원본에 적용이 되고, 삭제!
+
 print(f'======================================\n{reTDF}')
 # inplace = False : 원본 데이터 적용 여부 / 반환값 데이터 프레임 반환
 # inplace = Ture = 원본 데이터 적용 / 반환값 : None
@@ -57,9 +59,7 @@ print(f'======================================\n{df1.columns}')
 #택시 요금을 정할 때, 새롭게 데이터를 추가하거나 거리가 없다면 거리를 줘야하거나 할 때
 
 test = {'name':['마징가',"베트맨","원더우먼"]}
-
 test['name'].append("홍길도")
-
 print(test)
 
 

@@ -7,6 +7,13 @@ import pandas as pd
 
 FILE = 'dataFiles\\banklist.csv'
 
+PATH = '20220930.csv'
+df = pd.read_csv(PATH , encoding='cp949')
+print(f'bankDF====>\n{df}')
+df.info()
+print(df.head(50))
+
+
 # DF 객체 생성 --------------------------------------
 backDF = pd.read_csv(FILE)
 print(f'bankDF====>\n{backDF}')
@@ -64,3 +71,4 @@ pd.to_datetime('Oct-23-17')
 pd.to_datetime('23-17-Oct')
 
 # https://docs.python.org/3/library/datetime.html?highlight=strftime#strftime-strptime-behavior
+

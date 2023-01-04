@@ -1,5 +1,4 @@
 import pandas as pd
-
 # --------------------------------
 # 데이터 프레임
 # ----------------------------------
@@ -12,7 +11,6 @@ data = [[10,20,30],["F",'M',"N"]]
 
 df = pd.DataFrame(data)
 print(f'df =>\n{df}')
-
 print(f'df.index =>{df.index}')
 print(f'df.colums =>{df.columns}')
 print(f'df.shape =>{df.shape}')

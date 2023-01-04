@@ -53,3 +53,11 @@ print(df2.name[1],type(df2.name[1]))
 # 그래서 깨끗하게 가져오고싶다면, igore인덱스를 가져와야한다.
 
 print(df2.name[1].lower()) 
+
+
+#연습하기
+# df1.name =['B-Man','maziga','Woman']
+# print(df1.name)
+# print(type(df1.name[0]))
+# print(df1.name[0].upper())
+# print(df1.columns[1].upper())
